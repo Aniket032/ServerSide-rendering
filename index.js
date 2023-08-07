@@ -6,6 +6,7 @@ const url = require('url');
 const slugify = require('slugify');
 
 const replaceTemplate = require('./module/replaceTemplate');
+const { hostname } = require('os');
 
 
 
@@ -100,6 +101,6 @@ const server = http.createServer((req, res) => {
     }
 });
 
-server.listen(8000, '127.0.0.1', () => {
+server.listen(8000, () => {
     console.log('Listening to request port 8000 http://127.0.0.1:8000/overview');
 });
